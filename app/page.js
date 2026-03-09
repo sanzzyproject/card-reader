@@ -8,12 +8,12 @@ export default function Home() {
   // LOGIKA TIDAK DIUBAH SAMA SEKALI
   const [data, setData] = useState({
     name: "Ian",
-    title: "Web Developer | Redesigns",
-    title2: "That Convert",
-    site: "thetechtive.net",
-    socials: "@TheTechTive_",
-    instagram: "@TheTechTive_",
-    linkedin: "linkedin.com/in/ianeliasknight",
+    title: "Web Developer",
+    title2: "UI/UX Designer",
+    site: "saannforums.net",
+    socials: "@SaannForums",
+    instagram: "@SannForums.id",
+    linkedin: "linkedin.com/in/saan5ty",
   });
 
   const cardRef = useRef(null);
