@@ -38,7 +38,7 @@ export default function Home() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  // HANYA FIX UI: WARNA TITLE2 DIPERBAIKI AGAR MUNCUL JELAS
+  // HANYA FIX UI: MEMUNCULKAN TEKS "title2:" SESUAI PERMINTAAN
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center py-10 px-4 sm:px-8 font-sans text-[#ededed]">
       
@@ -100,10 +100,10 @@ export default function Home() {
                     <span className="truncate">{data.title}</span>
                   </div>
                   
-                  {/* FIX TITLE2: Warna dikembalikan menjadi putih terang dan posisinya dipaskan */}
+                  {/* FIX: MENAMBAHKAN TEKS "title2:" DI SINI */}
                   <div className="pl-4 flex w-full">
-                    <span className="mr-2 shrink-0 opacity-0 pointer-events-none select-none">"title:</span> 
-                    <span className="truncate text-[#e0e0e0]">{data.title2}</span>
+                    <span className="text-[#f07178] mr-2 shrink-0">"title2:</span> 
+                    <span className="truncate">{data.title2}</span>
                   </div>
                   
                   <div className="pl-4 flex w-full">
