@@ -5,7 +5,7 @@ import html2canvas from "html2canvas";
 import { Download } from "lucide-react";
 
 export default function Home() {
-  // LOGIKA DAN STATE JSON TIDAK DIUBAH SAMA SEKALI
+  // LOGIKA DAN STATE JSON TETAP SAMA, TIDAK DIUBAH SAMA SEKALI
   const [data, setData] = useState({
     name: "Ian",
     title: "Web Developer | Redesigns",
@@ -38,7 +38,7 @@ export default function Home() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  // HANYA UPDATE UI: RASIO KTP & TEXT JSON DIRAPIKAN
+  // HANYA FIX UI: WARNA TITLE2 DIPERBAIKI AGAR MUNCUL JELAS
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center py-10 px-4 sm:px-8 font-sans text-[#ededed]">
       
@@ -57,16 +57,15 @@ export default function Home() {
         {/* === BAGIAN KIRI: PREVIEW CARD === */}
         <div className="w-full lg:w-1/2 flex flex-col items-center gap-6">
           
-          {/* Pembungkus Kartu */}
+          {/* Pembungkus Kartu Rasio KTP */}
           <div className="w-full flex justify-center p-1 sm:p-2">
             
-            {/* KARTU DIUBAH KE RASIO KTP (1.58:1) */}
             <div 
               ref={cardRef} 
               className="w-full max-w-[480px] aspect-[1.58/1] bg-[#111111] rounded-2xl shadow-2xl p-5 sm:p-6 border border-[#222222] flex flex-col justify-center relative overflow-hidden"
             >
               
-              {/* Header Mac Buttons Moderen (Diposisikan Absolute agar diam di atas) */}
+              {/* Header Mac Buttons Moderen */}
               <div className="flex items-center justify-between absolute top-5 left-5 right-5">
                 <div className="flex gap-2">
                   <div className="w-3 h-3 rounded-full bg-[#ff5f57] border border-[#e0443e]"></div>
@@ -79,15 +78,15 @@ export default function Home() {
                 <div className="w-10"></div> {/* Spacer */}
               </div>
 
-              {/* Body / Code Editor View (Text Dirapikan) */}
-              <div className="flex font-mono text-[11px] sm:text-[13px] leading-relaxed mt-6 w-full">
+              {/* Body / Code Editor View */}
+              <div className="flex font-mono text-[12px] sm:text-[14px] leading-relaxed mt-6 w-full">
                 
                 {/* Line Numbers */}
-                <div className="flex flex-col text-[#444444] text-right pr-4 select-none shrink-0">
+                <div className="flex flex-col text-[#444444] text-right pr-4 select-none shrink-0 font-medium">
                   <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
                 </div>
                 
-                {/* Syntax Code - Flexbox mencegah teks patah acak */}
+                {/* Syntax Code */}
                 <div className="flex flex-col text-[#e0e0e0] w-full overflow-hidden">
                   <div>{"{"}</div>
                   
@@ -101,13 +100,13 @@ export default function Home() {
                     <span className="truncate">{data.title}</span>
                   </div>
                   
-                  {/* Title 2 Disejajarkan Tepat di Bawah Text Title 1 */}
+                  {/* FIX TITLE2: Warna dikembalikan menjadi putih terang dan posisinya dipaskan */}
                   <div className="pl-4 flex w-full">
-                    <span className="mr-2 shrink-0 opacity-0 pointer-events-none">"title:</span> 
-                    <span className="truncate text-[#888888]">{data.title2}</span>
+                    <span className="mr-2 shrink-0 opacity-0 pointer-events-none select-none">"title:</span> 
+                    <span className="truncate text-[#e0e0e0]">{data.title2}</span>
                   </div>
                   
-                  <div className="pl-4 flex w-full mt-0.5">
+                  <div className="pl-4 flex w-full">
                     <span className="text-[#f07178] mr-2 shrink-0">"site:</span> 
                     <span className="truncate">{data.site}</span>
                   </div>
